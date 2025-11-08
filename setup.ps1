@@ -3,13 +3,15 @@ param(
   [string]$matDirPath = 'aberration\materials',
   [string]$mapDirPath = 'aberration\maps',
   [string]$mdlDirPath = 'aberration\models',
-  [string]$portal2Path = 'C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2'
+  [string]$portal2Path = 'C:\Program Files (x86)\Steam\steamapps\common\Portal 2\',
+  [string]$portal2Args = '-novid',
+  [switch]$noLaunchGame
 
 )
 
 # Utility for converting paths to absolute paths
-# If an absolute path is proved to the -path argument, the same path is returned
-# If a relative path is provided to the -path argument, the script's path is prepended to the realtive path
+# If an absolute path is passed, the same path is returned
+# If a relative path is passed, the script's path is prepended to the realtive path
 function resolveSourcePath{
 
   param(
@@ -37,3 +39,11 @@ $CopyMapPath = resolveSourcePath -path $mapDirPath
 $CopyMdlPath = resolveSourcePath -path $mdlDirPath
 
 Write-Host "Portal 2/portal2 directory path set to: $portal2Path"
+
+if(-not $noLaunchGame){
+
+  $execPath = Join-Path -Path $portal2Path -ChildPath "portal2.exe"
+  Write-Host "Launching Portal 2 at: $execPath with arguments: $portal2Args" -ForegroundColor Green
+  & $ExecPath $portal2Args
+
+}
