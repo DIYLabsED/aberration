@@ -1,8 +1,14 @@
+# Copies asset and map files into Portal 2, and runs game
+# Directories can be manually specified using the -matDirPath, -mapDirPath, and -mdlDirPath arguments. Paths can be absolute or relative
+# The path to the steamapps/common/Portal 2 directory can be specified using the -portal2Path argument
+# Launch arguments for Portal 2 can be specified using the -portal2Args argument. See https://developer.valvesoftware.com/wiki/Command_line_options for a list of arguments
+# Launching Portal 2 after copying can be disabled with the -noLaunchGame flag
+
 param(
 
-  [string]$matDirPath = 'aberration\materials',
-  [string]$mapDirPath = 'aberration\maps',
-  [string]$mdlDirPath = 'aberration\models',
+  [string]$matDirPath = '\materials',
+  [string]$mapDirPath = '\maps',
+  [string]$mdlDirPath = '\models',
   [string]$portal2Path = 'C:\Program Files (x86)\Steam\steamapps\common\Portal 2\',
   [string]$portal2Args = '-novid',
   [switch]$noLaunchGame
@@ -38,7 +44,7 @@ $CopyMatPath = resolveSourcePath -path $matDirPath
 $CopyMapPath = resolveSourcePath -path $mapDirPath
 $CopyMdlPath = resolveSourcePath -path $mdlDirPath
 
-Write-Host "Portal 2/portal2 directory path set to: $portal2Path"
+Write-Host "Portal 2 directory path set to: $portal2Path"
 
 if(-not $noLaunchGame){
 
