@@ -12,7 +12,6 @@ param(
   [string]$portal2Path = 'C:\Program Files (x86)\Steam\steamapps\common\Portal 2\',
   [string]$portal2Args = '+map blank-test-map',
   [switch]$noLaunchGame
-
 )
 
 # Utility for converting paths to absolute paths
@@ -39,7 +38,8 @@ function resolveSourcePath{
 
 }
 
-
+# TODO: Write cleaner way to handle asset directories
+# With this system, changes have to be made to the param() block, *and* this array
 $AssetFolders = @(
 
   (resolveSourcePath -path $matDirPath)
@@ -72,3 +72,5 @@ if(-not $noLaunchGame){
   & $execPath $portal2Args
 
 }
+
+Read-Host -Prompt "Press any key to close this window"
