@@ -10,7 +10,7 @@ param(
   [string]$mapDirPath = 'maps',
   [string]$mdlDirPath = 'models',
   [string]$portal2Path = 'C:\Program Files (x86)\Steam\steamapps\common\Portal 2\',
-  [string]$portal2Args = '+map blank-test-map',
+  [string]$portal2Args = '+map aberration-teleportation-room-geometry-test',
   [switch]$noLaunchGame
 )
 
