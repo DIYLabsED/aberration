@@ -38,7 +38,7 @@ function Resolve-Source-Path{
 
 }
 
-function conflictCheck(){
+function Conflict-Check(){
 
   # Throw error if no map name is passed for copyVMF and copyBSP
   if(-not $mapName){
@@ -76,8 +76,7 @@ function Copy-VMF-Into-Repo(){
 
   $repoPath = Join-Path $resolvedSourcedDirPath -ChildPath "mapsrc"
 
-  Write-Host "Absolute path of VMF file to be copied: $vmfPath"
-  Write-Host "Absolute path in repo where VMF file will be copied: $repoPath"
+  Write-Host "Copying VMF file from $vmfPath to $repoPath" -ForegroundColor Green
 
   Copy-Item -Path $vmfPath -Destination $repoPath -Force
 
@@ -87,16 +86,15 @@ function Copy-BSP-Into-Repo(){
 
   $mapNameBSP = $mapName + ".bsp"
   $mapsDir = Join-Path -Path $gamePath -ChildPath "portal2/maps"
-  $vmfPath = Join-Path -Path $mapsDir -ChildPath $mapNameBSP
+  $bspPath = Join-Path -Path $mapsDir -ChildPath $mapNameBSP
 
   $resolvedModDirPath = Resolve-Source-Path -path $modDirPath
 
   $repoPath = Join-Path $resolvedModDirPath -ChildPath "maps"
 
-  Write-Host "Absolute path of BSP file to be copied: $vmfPath"
-  Write-Host "Absolute path in repo where BSP file will be copied: $repoPath"
+  Write-Host "Copying BSP file from $bspPath to $repoPath" -ForegroundColor Green
 
-  Copy-Item -Path $vmfPath -Destination $repoPath -Force
+  Copy-Item -Path $bspPath -Destination $repoPath -Force
 
 }
 
@@ -105,14 +103,14 @@ function Copy-Assets-Into-Game(){
   $resolvedModDirPath = Resolve-Source-Path -path $modDirPath
   $p2Path = Join-Path -Path $gamePath -ChildPath "portal2"
 
-  Write-Host "Copying assets from $resolvedModDirPath to $p2Path"
+  Write-Host "Copying assets from $resolvedModDirPath to $p2Path" -ForegroundColor Green
 
   Copy-Item -Path $resolvedModDirPath -Destination $p2Path -Recurse -Force
 
 }
 
 
-conflictCheck
+Conflict-Check
 
 if($copyVMFIntoRepo){
   Copy-VMF-Into-Repo
