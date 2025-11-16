@@ -3,14 +3,16 @@ param(
   [string]$modDirPath = 'aberration',
   [string]$sourceDirPath = 'src',
   [string]$gamePath = 'C:\Program Files (x86)\Steam\steamapps\common\Portal 2\',
+  [string]$steamPath = 'C:\Program Files (x86)\Steam\steam.exe',
 
   [switch]$copyVMFIntoRepo,
   [switch]$copyBSPIntoRepo, 
   [string]$mapName,
   [switch]$copyAssetsIntoGame,
 
-  [switch]$runGameAfterAssetCopy,
-  [string]$gameArgs = ''
+  [switch]$runGame,
+  [string]$gameArgs = '',
+  [string]$gameID = 620
 
 )
 
@@ -109,6 +111,13 @@ function Copy-Assets-Into-Game(){
 
 }
 
+function Launch-Game(){
+
+  Write-Host "Launching game ID $gameID with arguments $gameArgs using Steam at $steamPath" -ForegroundColor Yellow
+
+  & $steamPath -applaunch $gameID $gameArgs
+
+}
 
 Conflict-Check
 
@@ -123,3 +132,9 @@ if($copyBSPIntoRepo){
 if($copyAssetsIntoGame){
   Copy-Assets-Into-Game
 }
+
+if($runGame){
+  Launch-Game
+}
+
+Read-Host -Prompt "Press ENTER to close this window"
