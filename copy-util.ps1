@@ -17,7 +17,7 @@ param(
 # Utility for converting paths to absolute paths
 # If an absolute path is passed, the same path is returned
 # If a relative path is passed, the script's path is prepended to the relative path
-function resolveSourcePath{
+function Resolve-Source-Path{
 
   param(
     [string]$path
@@ -65,14 +65,14 @@ function conflictCheck(){
 
 }
 
-function vmfIntoRepo(){
+function Copy-VMF-Into-Repo(){
 
   # TODO: Look into why -AdditionalChildPath argument is throwing NamedParameterNotFound error
   $mapNameVMF = $mapName + ".vmf"
   $mapsDir = Join-Path -Path $gamePath -ChildPath "sdk_content/maps"
   $vmfPath = Join-Path -Path $mapsDir -ChildPath $mapNameVMF
 
-  $resolvedSourcedDirPath = resolveSourcePath -path $sourceDirPath
+  $resolvedSourcedDirPath = Resolve-Source-Path -path $sourceDirPath
 
   $repoPath = Join-Path $resolvedSourcedDirPath -ChildPath "mapsrc"
 
@@ -83,13 +83,13 @@ function vmfIntoRepo(){
 
 }
 
-function bspIntoRepo(){
+function Copy-BSP-Into-Repo(){
 
   $mapNameBSP = $mapName + ".bsp"
   $mapsDir = Join-Path -Path $gamePath -ChildPath "portal2/maps"
   $vmfPath = Join-Path -Path $mapsDir -ChildPath $mapNameBSP
 
-  $resolvedModDirPath = resolveSourcePath -path $modDirPath
+  $resolvedModDirPath = Resolve-Source-Path -path $modDirPath
 
   $repoPath = Join-Path $resolvedModDirPath -ChildPath "maps"
 
@@ -100,9 +100,9 @@ function bspIntoRepo(){
 
 }
 
-function assetsIntoGame(){
+function Copy-Assets-Into-Game(){
 
-  $resolvedModDirPath = resolveSourcePath -path $modDirPath
+  $resolvedModDirPath = Resolve-Source-Path -path $modDirPath
   $p2Path = Join-Path -Path $gamePath -ChildPath "portal2"
 
   Write-Host "Copying assets from $resolvedModDirPath to $p2Path"
@@ -115,13 +115,13 @@ function assetsIntoGame(){
 conflictCheck
 
 if($copyVMFIntoRepo){
-  vmfIntoRepo
+  Copy-VMF-Into-Repo
 }
 
 if($copyBSPIntoRepo){
-  bspIntoRepo
+  Copy-BSP-Into-Repo
 }
 
 if($copyAssetsIntoGame){
-  AssetsIntoGame
+  Copy-Assets-Into-Game
 }
