@@ -1,6 +1,6 @@
 param(
 
-  [string]$modDirPath = 'aberration',
+  [string]$modDirPath = 'aberration/',
   [string]$sourceDirPath = 'src',
   [string]$gamePath = 'C:\Program Files (x86)\Steam\steamapps\common\Portal 2\',
   [string]$steamPath = 'C:\Program Files (x86)\Steam\steam.exe',
