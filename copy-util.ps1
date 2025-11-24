@@ -105,10 +105,10 @@ function Copy-Assets-Into-Game(){
   $resolvedModDirPath = Resolve-Source-Path -path $modDirPath
   $p2Path = Join-Path -Path $gamePath -ChildPath "portal2"
 
-  Write-Host "Copying assets from $resolvedModDirPath to $p2Path" -ForegroundColor Green
+  Write-Host "Copying assets from $resolvedModDirPath\* to $p2Path" -ForegroundColor Green
 
-  Copy-Item -Path $resolvedModDirPath -Destination $p2Path -Recurse -Force
-
+  Copy-Item -Path (Join-Path $resolvedModDirPath '*') -Destination $p2Path -Recurse -Force
+  
 }
 
 function Launch-Game(){
