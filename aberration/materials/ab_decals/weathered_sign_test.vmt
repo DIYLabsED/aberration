@@ -1,4 +1,5 @@
 "LightmappedGeneric"
 {
 	"$basetexture" "ab_decals/weathered_sign_test"
+	"$translucent" 1
 }
