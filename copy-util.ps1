@@ -8,7 +8,7 @@ param(
   [switch]$copyVMFIntoRepo,
   [switch]$copyBSPIntoRepo, 
   [string]$mapName,
-  [switch]$copyAssetsIntoGame,
+  [switch]$mountMod,
 
   [switch]$runGame,
   [string]$gameArgs = '',
@@ -129,7 +129,7 @@ if($copyBSPIntoRepo){
   Copy-BSP-Into-Repo
 }
 
-if($copyAssetsIntoGame){
+if($mountMod){
   Copy-Assets-Into-Game
 }
 
