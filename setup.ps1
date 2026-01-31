@@ -1,3 +1,5 @@
+# **DEPRECATED** Use copy-util instead
+
 # Copies asset and map files into Portal 2, and runs game
 # Directories can be manually specified using the -matDirPath, -mapDirPath, and -mdlDirPath arguments. Paths can be absolute or relative
 # The path to the steamapps/common/Portal 2 directory can be specified using the -portal2Path argument
