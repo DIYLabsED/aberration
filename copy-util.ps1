@@ -119,22 +119,29 @@ function Launch-Game(){
 
 }
 
-Conflict-Check
-
-if($copyVMFIntoRepo){
-  Copy-VMF-Into-Repo
+if($PSBoundParameters.Count -eq 0){
+    Launch-Game
 }
+else{
 
-if($copyBSPIntoRepo){
-  Copy-BSP-Into-Repo
-}
+  Conflict-Check
 
-if($mountMod){
-  Copy-Assets-Into-Game
-}
+  if($copyVMFIntoRepo){
+    Copy-VMF-Into-Repo
+  }
 
-if($runGame){
-  Launch-Game
+  if($copyBSPIntoRepo){
+    Copy-BSP-Into-Repo
+  }
+
+  if($mountMod){
+    Copy-Assets-Into-Game
+  }
+
+  if($runGame){
+    Launch-Game
+  }
+
 }
 
 Read-Host -Prompt "Press ENTER to close this window"
