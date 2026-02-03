@@ -1,0 +1,7 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "ab_tests/illumtest"
+	"$detail" "ab_tests/illumtest-glow"
+	"$detailscale" 1
+	"$detailblendmode" 5
+}

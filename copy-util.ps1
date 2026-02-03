@@ -120,6 +120,7 @@ function Launch-Game(){
 }
 
 if($PSBoundParameters.Count -eq 0){
+    Write-Host "No arguments provided. Launching game" -ForegroundColor Yellow
     Launch-Game
 }
 else{
