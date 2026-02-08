@@ -55,9 +55,9 @@ function Conflict-Check(){
 
   }
 
-  # Throw error if copyVMF/copyBSP *and* copyAssets is called 
+  # Throw error if copyVMF/copyBSP *and* mountMod is called 
   # (Lazy solution to avoid file conflicts)
-  if($copyAssetsIntoGame){
+  if($mountMod){
 
     if($copyVMFIntoRepo -or $copyBSPIntoRepo){
       Write-Error "Cannot copy assets into game and repo at the same time!"
