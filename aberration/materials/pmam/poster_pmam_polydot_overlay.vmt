@@ -1,0 +1,8 @@
+LightmappedGeneric
+{
+
+$basetexture "pmam/poster_pmam_polydot_overlay"
+$surfaceprop default
+$translucent 1
+$decal 1
+}

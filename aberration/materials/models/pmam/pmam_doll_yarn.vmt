@@ -1,0 +1,5 @@
+VertexLitGeneric
+{
+$basetexture "models/pmam/pmam_doll_yarn"
+$surfaceprop cloth	
+}
