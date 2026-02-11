@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "ab_signs/sign_no_power_illum"
+	"$translucent" 1
+}
