@@ -37,4 +37,20 @@ To copy manually, follow the following steps:
 | `mapName` | String containing name of map to be copied. Used by `copyVMFIntoRepo` and `copyBSPIntoRepo` | No default. | Do not add extension (`.vmf`, `.bsp`) to map name. This flag does nothing if `copyVMFIntoRepo` or `copyBSPIntoRepo` is not set. |
 | `runGame` | If set, `copy-util` attempts to launch the game through Steam | Not flagged. | If no other parameters are passed, `copy-util` attempts to launch the game. |
 | `gameArgs` | String containing arguments to be provided to the game. | No defaults. | Use `" "` around arguments. See [this VDC article](https://developer.valvesoftware.com/wiki/Command_line_options) for a list of possible arguments. |
-| `gameID` | Game ID passed to Steam | `620` | Set to Portal 2's Steam game ID by default. |
+| `gameID` | Game ID passed to Steam executable | `620` | Set to Portal 2's Steam game ID by default. |
+
+### Credits
+
+#### Tools used
+- **[Inkscape](https://inkscape.org/)**: Graphics design
+- **[Hammer++](https://ficool2.github.io/HammerPlusPlus-Website/)**: Level design
+
+#### External assets
+- Circuit breaker with glowing bulb *(instance)*: Made by `@electrodynamite12`
+- Refracting glass *(material)*: Made by `@lenship2`
+- Improved light strips *(model)*: Made by `@gapeholnicorn`
+- BTS-style character decals *(material)*: Made by `@lenship2`
+- PMaM lab monitor *(skin)*: Made by `@hazel_rose_webs`
+- PMaM posters and stuffie *(material, model)*: Made by `@nuclearshill`, `@therealprogressbar95`, and `@.polydot`
+
+Custom assets sourced from the `#custom-assets` forum in the [Portal Mapping and Modding Discord server](https://discord.com/invite/pmam).
