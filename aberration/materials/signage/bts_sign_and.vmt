@@ -1,0 +1,13 @@
+DecalModulate
+{
+	$basetexture "signage/bts_sign_and"
+
+	$decal 1
+
+	$vertexcolor 1
+	$vertexalpha 1
+
+	%keywords "portal2 bts"
+
+	$decalscale 0.5
+}

@@ -1,0 +1,26 @@
+Refract
+{
+	$basetexture "models/corny/glass_lightcover/m_corny_glass_lightcover_32x128_01b_basetexture"
+	$surfaceprop Glass
+
+	$refract 1
+	$normalmap "models/corny/glass_lightcover/m_corny_glass_lightcover_32x128_01a_normalmap"
+	//$normalmap "glass/refract_light_normal" 
+	//$refracttinttexture "models/corny/glass_lightcover/m_corny_glass_lightcover_32x128_01b_refracttinttexture"
+	$refractamount .0125 //I dont think this one actually works under localrefract but I kept it just in case
+
+	$REFRACTTINT "[1.0 .89 .81]" //Warm
+
+	$localrefract 1 
+	$localrefractdepth "0.05"
+	$model 1
+
+	$envmap "metal/black_wall_envmap_002a"
+	hdr
+	{
+		$envmap "metal/black_wall_envmap_002a_hdr"
+	}
+	$envmapcontrast 1
+	$envmapsaturation .2
+	$envmaptint "[.2 .2 .2]"
+}

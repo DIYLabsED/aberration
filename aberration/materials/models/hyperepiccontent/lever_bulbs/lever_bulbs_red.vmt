@@ -1,0 +1,5 @@
+UnlitGeneric 
+{
+	$basetexture "models\hyperepiccontent\lever_bulbs\red"
+	$additive 1
+}

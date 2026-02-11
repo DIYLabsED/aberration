@@ -1,0 +1,7 @@
+LightmappedGeneric
+{
+    $basetexture "metal\Metal"
+    $surfaceprop metal
+    $envmap env_cubemap
+    $bumpmap "metal\Metal_normal"
+}
