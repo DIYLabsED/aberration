@@ -1,8 +1,0 @@
-"LightmappedGeneric"
-{
-	"$basetexture" "ab_signs/sign_unlocked"
-	"$detail" "ab_signs/sign_unlocked_illum"
-	"$translucent" 1
-	"$detailscale" 1
-	"$detailblendmode" 5	
-}
