@@ -2,6 +2,8 @@
 Aberration is a work-in-progress mod for Portal 2. 
 TODO: Expand
 
+<br>
+
 ### Installation
 Aberration asset files are stored in the `aberration` folder of this repository. To install, you have two options:
 - Use the copy-util script (Windows 10/11 exclusive).
@@ -21,6 +23,8 @@ To copy manually, follow the following steps:
 - Copy assets
   - Copy the contents of the `aberration` folder in this repository into the `portal2` folder. No files should conflict, unless you are reinstalling Aberration.
 
+<br>
+
 ### copy-util
 `copy-util.ps1` is a utility script in the root of this repository. This script automates copying files into and out of this repo.
 
@@ -39,13 +43,11 @@ To copy manually, follow the following steps:
 | `gameArgs` | String containing arguments to be provided to the game. | No defaults. | Use `" "` around arguments. See [this VDC article](https://developer.valvesoftware.com/wiki/Command_line_options) for a list of possible arguments. |
 | `gameID` | Game ID passed to Steam executable | `620` | Set to Portal 2's Steam game ID by default. |
 
-### Credits
+<br>
 
-#### Tools used
-- **[Inkscape](https://inkscape.org/)**: Graphics design
-- **[Hammer++](https://ficool2.github.io/HammerPlusPlus-Website/)**: Level design
+### External assets 
 
-#### External assets
+#### Assets from the Portal Mapping and Modding community:
 - Circuit breaker with glowing bulb *(instance)*: Made by `@electrodynamite12`
 - Refracting glass *(material)*: Made by `@lenship2`
 - Improved light strips *(model)*: Made by `@gapeholnicorn`
@@ -54,3 +56,13 @@ To copy manually, follow the following steps:
 - PMaM posters and stuffie *(material, model)*: Made by `@nuclearshill`, `@therealprogressbar95`, and `@.polydot`
 
 Custom assets sourced from the `#custom-assets` forum in the [Portal Mapping and Modding Discord server](https://discord.com/invite/pmam).
+
+#### Other assets:
+- Aperture Science logo and symbol by Valve
+
+<br>
+
+### Notes
+Map source files are located at `/src/mapsrc`. These maps were made using [Hammer++](https://ficool2.github.io/HammerPlusPlus-Website/index.html). I have not tried loading these maps in vanilla Hammer, your mileage may vary.
+
+Posters and decals are located at at `/src/matsrc`. They were made with [Inkscape](https://inkscape.org/), and may contain Inkscape-specific data. You will be able to open and view them with any SVG editor/viewer, but to edit, I recommend using Inkscape.
