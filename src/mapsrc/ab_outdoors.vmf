@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8870"
-	"mapversion" "392"
+	"mapversion" "400"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -89,7 +89,7 @@ bgimages_plus
 world
 {
 	"id" "1"
-	"mapversion" "392"
+	"mapversion" "400"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -16885,6 +16885,83 @@ entity
 		"OnTrigger" "light_spotlight_2TurnOn0-1"
 	}
 	"origin" "106 932 9.97675"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "14553"
+	"classname" "game_text"
+	"channel" "1"
+	"color" "255 255 255"
+	"color2" "146 236 73"
+	"effect" "2"
+	"fadein" "0.05"
+	"fadeout" "0.5"
+	"fxtime" "0.1"
+	"holdtime" "3"
+	"message" "This mod contains flickering lights."
+	"targetname" "text_intro_tw"
+	"x" "-1"
+	"y" "-1"
+	connections
+	{
+		"OnTrigger" "light_spotlight_2TurnOff0-1"
+		"OnTrigger" "light_spotlight_2TurnOn0.1-1"
+		"OnTrigger" "light_spotlight_2TurnOff0.2-1"
+	}
+	"origin" "170 964 9.97675"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "14585"
+	"classname" "env_fade"
+	"duration" "0.01"
+	"holdtime" "3"
+	"renderamt" "255"
+	"rendercolor" "0 0 0"
+	"ReverseFadeDuration" "2"
+	"targetname" "fade_intro"
+	connections
+	{
+		"OnTrigger" "light_spotlight_2TurnOff0-1"
+		"OnTrigger" "light_spotlight_2TurnOn0.1-1"
+		"OnTrigger" "light_spotlight_2TurnOff0.2-1"
+	}
+	"origin" "170 946 9.97675"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "14599"
+	"classname" "logic_relay"
+	"StartDisabled" "0"
+	"targetname" "relay_intro_message"
+	connections
+	{
+		"OnSpawn" "fade_introFade0-1"
+		"OnSpawn" "text_intro_twDisplay0-1"
+		"OnSpawn" "fade_introFadeReverse3-1"
+	}
+	"origin" "188 964 9.97675"
 	editor
 	{
 		"color" "220 30 220"
