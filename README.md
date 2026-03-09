@@ -34,8 +34,8 @@ To copy manually, follow the following steps:
 | ---- | --------- | ------- | ---- |
 | `modDirPath` | String containing path to mod files which will be copied into game. | `aberration/` | Path can be relative or absolute. |
 | `sourceDirPath` | String containing path to directory where `VMF` and `BSP` files which will be copied to. | `src/` | Path can be relative or absolute. |
-| `gamePath` | String containing path to directory where Source game is installed. | `src/` | This directory is opened when clicking `Browse Local Files` in Steam |
-| `steamPath` | String containing path to Steam executable | `src/` | Path needs to include Steam executable. Not used if `runGame` is not set |
+| `gamePath` | String containing path to directory where Source game is installed. | `C:\Program Files (x86)\Steam\steamapps\common\Portal 2\` | This directory is opened when clicking `Browse Local Files` in Steam |
+| `steamPath` | String containing path to Steam executable | `C:\Program Files (x86)\Steam\steam.exe` | Path needs to include Steam executable. Not used if `runGame` is not set |
 | `copyVMFIntoRepo` | If set, `copy-util` copies the VMF file provided to `mapName` into `sourceDirPath/mapsrc` | Not flagged. | Cannot be used at the same time as `mountMod`. Needs a map to be passed into `mapName` |
 | `copyBSPIntoRepo` | If set, `copy-util` copies the BSP file provided to `mapName` into `modDirPath/maps` | Not flagged. | Cannot be used at the same time as `mountMod`. Needs a map to be passed into `mapName` |
 | `mapName` | String containing name of map to be copied. Used by `copyVMFIntoRepo` and `copyBSPIntoRepo` | No default. | Do not add extension (`.vmf`, `.bsp`) to map name. This flag does nothing if `copyVMFIntoRepo` or `copyBSPIntoRepo` is not set. |
