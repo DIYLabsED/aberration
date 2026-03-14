@@ -39,6 +39,7 @@ To copy manually, follow the following steps:
 | `copyVMFIntoRepo` | If set, `copy-util` copies the VMF file provided to `mapName` into `sourceDirPath/mapsrc` | Not flagged. | Cannot be used at the same time as `mountMod`. Needs a map to be passed into `mapName` |
 | `copyBSPIntoRepo` | If set, `copy-util` copies the BSP file provided to `mapName` into `modDirPath/maps` | Not flagged. | Cannot be used at the same time as `mountMod`. Needs a map to be passed into `mapName` |
 | `mapName` | String containing name of map to be copied. Used by `copyVMFIntoRepo` and `copyBSPIntoRepo` | No default. | Do not add extension (`.vmf`, `.bsp`) to map name. This flag does nothing if `copyVMFIntoRepo` or `copyBSPIntoRepo` is not set. |
+| `mountMod` | If set, `copy-util` copies assets from `modDirPath` into `gamePath` | Not flagged. | Custom copy paths can be set by specifying `modDirPath` and `gamePath`. |
 | `runGame` | If set, `copy-util` attempts to launch the game through Steam | Not flagged. | If no other parameters are passed, `copy-util` attempts to launch the game. |
 | `gameArgs` | String containing arguments to be provided to the game. | No defaults. | Use `" "` around arguments. See [this VDC article](https://developer.valvesoftware.com/wiki/Command_line_options) for a list of possible arguments. |
 | `gameID` | Game ID passed to Steam executable | `620` | Set to Portal 2's Steam game ID by default. |
