@@ -1,0 +1,10 @@
+VertexlitGeneric
+{
+$basetexture "models\max\door\portal_door_02"
+
+$selfillum 1
+
+
+
+
+}

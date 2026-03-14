@@ -1,0 +1,14 @@
+VertexLitGeneric
+{
+$baseTexture "models\max/platform/Light_Rail_Platform_grey"
+$bumpmap "models\max/platform\Light_Rail_Platform_normal"
+$phong 1
+$phongexponenttexture "models\max/platform\Light_Rail_Platform_exponent"
+
+$phongboost 1
+$lightwarptexture "models\max/platform\Light_Rail_Platform_lightwarp"
+$phongfresnelranges "[2 0.5 0.5]"
+
+
+$selfillum 1
+}

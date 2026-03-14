@@ -1,0 +1,20 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\max\p1doors/door_01"
+
+
+	"$bumpmap" "models\max\p1doors\door_normal"
+	"$phong" "1"
+	"$phongexponenttexture" "models\max\p1doors\door_exponent"
+//	"$phongexponent" "25"
+	
+	"$phongboost" "1"	
+	//"$lightwarptexture" "models\max\p1doors\door_lightwarp"
+	"$phongfresnelranges"	"[2 0.5 1]"
+//	"$halflambert" "1"
+
+//	"$envmap" "env_cubemap"
+//  "$normalmapalphaenvmapmask" 1
+	
+    "$selfillum" 1
+}

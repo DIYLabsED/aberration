@@ -1,0 +1,10 @@
+VertexlitGeneric
+{
+$basetexture "models\max\portal_button_hybrid\portal_button_blue"
+$selfIllum 1
+
+
+
+
+
+}

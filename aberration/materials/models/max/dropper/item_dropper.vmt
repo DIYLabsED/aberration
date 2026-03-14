@@ -1,0 +1,13 @@
+VertexLitGeneric
+{
+$basetexture "models/max/dropper/item_dropper"
+$surfaceprop metal
+$selfillum 1
+$selfillummask "models/max/dropper/item_dropper_illum_mask"
+$phong 1
+$phongexponent 50
+$phongboost 2
+$phongfresnelranges "[.3 .6 4]"
+$basealphaenvmapmask 1
+$basemapalphaphongmask 1
+}

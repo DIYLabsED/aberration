@@ -1,0 +1,11 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models/max/elevator/round_elevator_sheet_1"
+	"$surfaceprop"	"metal"
+	//"$envmap"	"env_cubemap"
+//	"$basemapalphaphongmask" "1"
+//	"$phong" 1
+//	"$phongboost"	"0.5"
+//	"$phongexponenttexture"	"models/models/max/elevator/elevator_caps_exp"
+//	"$phongfresnelranges"	"[5 1.5 2]"
+}
