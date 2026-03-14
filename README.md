@@ -54,6 +54,7 @@ To copy manually, follow the following steps:
 - BTS-style character decals *(material)*: Made by `@lenship2`
 - PMaM lab monitor *(skin)*: Made by `@hazel_rose_webs`
 - PMaM posters and stuffie *(material, model)*: Made by `@nuclearshill`, `@therealprogressbar95`, and `@.polydot`
+- Speaker System *(model)*: Made by `@maxsons231`
 
 Custom assets sourced from the `#custom-assets` forum in the [Portal Mapping and Modding Discord server](https://discord.com/invite/pmam).
 
