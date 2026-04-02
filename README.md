@@ -1,3 +1,8 @@
+> [!NOTE]
+> This repository contains files for the original Portal 2 version of Aberration. This version is no longer being worked on, and the project has moved to Portal 2: Community Edition. The new repository is [here](https://github.com/DIYLabsED/aberration-p2ce).
+
+<br>
+
 ### Introduction
 Aberration is a work-in-progress mod for Portal 2. 
 TODO: Expand
